@@ -1,21 +1,45 @@
 
-# Order Management System (SQL & Database Design)  
-A MySQL-based Order Management System with relational database design, ERD, normalization, and sample data.  
+📌 Order Management System (SQL & Database Design)  
+This project is a relational database system designed for an order management system. It includes an Entity-Relationship Diagram (ERD), normalized 3NF database schema, and sample SQL scripts. The goal is to provide an optimized structure for managing orders, customers, and inventory efficiently.
 
-## Features  
-✔ Designed an optimized relational database in 3NF  
-✔ Created an ERD to visualize entity relationships  
-✔ Developed MySQL scripts for table creation and data insertion  
-✔ Sample dataset provided for testing  
+📌 Key Features
+✅ Optimized database design (3NF) – No redundant data, efficient queries.
+✅ Structured ERD – Clearly defines relationships between entities.
+✅ Ready-to-use SQL scripts – Easy setup and testing.
 
-## Technologies Used  
-- MySQL  
-- SQL Normalization (3NF)  
+📂 Project Structure
+📁 order-management-system/
+├── ERD.png – Entity-Relationship Diagram
+├── database_schema.sql – SQL script to create tables
+├── insert_sample_data.sql – SQL script with sample data
+└── README.md – Project documentation
+
+🛠 Technologies Used  
+- Database: MySQL  
+- Normalization: 3NF  
 - Entity-Relationship Diagram (ERD)  
-- Python (if applicable)  
+- SQL Queries: Table creation, insertion, and retrieval
 
-## How to Use  
-1. Clone this repo: `git clone https://github.com/whynhii3003/order-management-system.git`  
-2. Import `database_schema.sql` into MySQL  
-3. Run `insert_sample_data.sql` to add sample records  
-4. Query the database to test functionality  
+📊 Database Schema
+Main Entities & Relationships
+✔ Customers – Stores customer details
+✔ Orders – Stores order details with timestamps
+✔ Products – Stores product information
+✔ Order_Items – Tracks products in each order
+
+📌 ERD Preview:
+
+🚀 How to Use This Database
+1️⃣ Setup MySQL & Import Database
+1. Open MySQL Workbench or any MySQL client.
+2. Run database_schema.sql to create tables.
+3. Run insert_sample_data.sql to insert sample data.
+2️⃣ Sample Query - Get All Orders with Customer Names
+
+SELECT Orders.order_id, Customers.customer_name, Orders.order_date
+FROM Orders
+JOIN Customers ON Orders.customer_id = Customers.customer_id;
+
+📌 Author & Contact
+📌 GitHub: whynhii3003
+📧 Email: your.email@example.com
